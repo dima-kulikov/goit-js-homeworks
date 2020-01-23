@@ -16,7 +16,6 @@ if(ADMIN_PASSWORD == message){
     alert('Добро пожаловать!')  ;  
 }
 
-
 else if  (message == null) {
     alert("Отменено пользователем!");
 } 

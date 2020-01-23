@@ -16,27 +16,29 @@
 let credits  = 23580;
 let pricePerDroid = 3000;
 
-
-
 let message = parseInt(prompt('Введите количество дроидов которые хотите купить'), 10);
 
 let totalPrice = message * pricePerDroid;
 let credits_ostatok = credits - totalPrice;
 
+
+
 if(totalPrice > credits){
-   console.log('Недостаточно средств на счету!')
+    alert('Недостаточно средств на счету!')
 }
 
-if(totalPrice < credits){
-    console.log(`Выбран ${message} , цена за штуку ${message} кредитов`);
+else  if(totalPrice < credits){
+    alert(`Вы купили ${message} дроидов, на счету осталось ${credits_ostatok} кредитов.`);
 }
-
-consol.log(`Вы купили ${message} дроидов, на счету осталось ${credits_ostatok} кредитов.`)
-
-
-
+else if  (message == null) {
+    alert("Отменено пользователем!");     // не работает!!!!!
+} 
 
 
+
+
+
+ВАРИАНТ ----   2
 --------------------
 let credits = 23580,
     pricePerDroid = 300,
@@ -58,13 +60,13 @@ alert(message);
 
 
 
-
-
 if(massage == null){
     console.log('Отменено пользователем')
 }
 
-
+if(massage == null){
+    alert('Отменено пользователем')
+}
 
 
 

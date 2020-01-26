@@ -6,9 +6,10 @@
     justify-content: center;
 }
 
+
 .flex-case__block{
     max-width: 500px;
-    text-align:  center;
+
     padding: 20px;
     margin-top: 200px;
     border: 2px solid rgba(0, 0, 0, .3);
@@ -17,4 +18,8 @@
    -23px 0 20px -23px rgba(0, 0, 0, .8),
    23px 0 20px -23px rgba(0, 0, 0, .8),
    0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.title{
+    text-align:  center;
 }

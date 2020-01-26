@@ -59,3 +59,22 @@ if ( price !== undefined ) {
   alert(`Доставка в ${country} будет стоить ${price} кредитов`);
 }
 
+// --------------------------------------------------------------------
+
+
+// let dataObject = {
+//   china: 100,
+//   chilie: 250,
+//   australia: 170,
+//   india: 80
+// }
+
+// function searchByName(name) {
+//   if(!dataObject[name.toLowerCase()]) {
+//     prompt('Выбери нормальную страну, придурок')
+//   } else {
+//     alert(`Цена в ${name.toUpperCase()} будет около ` + dataObject[name] + ' тугриков')
+//   }
+// }
+// searchByName('ZALUPA')
+// searchByName('china')

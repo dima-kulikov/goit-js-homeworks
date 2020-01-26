@@ -12,3 +12,6 @@ do {
 if (input === null){
    alert(total) 
 }
+
+
+читать про циклы

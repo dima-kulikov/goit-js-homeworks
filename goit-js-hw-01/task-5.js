@@ -62,19 +62,25 @@ if ( price !== undefined ) {
 // --------------------------------------------------------------------
 
 
-// let dataObject = {
-//   china: 100,
-//   chilie: 250,
-//   australia: 170,
-//   india: 80
-// }
+let dataObject = {
+  china: 100,
+  chilie: 250,
+  australia: 170,
+  india: 80
+  name = prompt(`Выберите страну`);
+}
 
-// function searchByName(name) {
-//   if(!dataObject[name.toLowerCase()]) {
-//     prompt('Выбери нормальную страну, придурок')
-//   } else {
-//     alert(`Цена в ${name.toUpperCase()} будет около ` + dataObject[name] + ' тугриков')
-//   }
-// }
+
+function searchByName(name)
+
+
+{
+  if(!dataObject[name.toLowerCase()]) {
+    alert('Выбери нормальную страну, придурок')
+
+  } else {
+    alert(`Цена в ${name.toUpperCase()} будет около ` + dataObject[name] + ' тугриков')
+  }
+}
 // searchByName('ZALUPA')
 // searchByName('china')

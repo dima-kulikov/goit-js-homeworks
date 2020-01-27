@@ -1,17 +1,19 @@
 let input;
 let total = 0;
 
-let total = 0;
-do {
-  alert( i );
-  i++;
-} while (i < 3);
+while (input !== null) {
+    input = prompt(`Введите число:`);
 
+  if (input === ``){
+  	input = prompt(`Число не введено, пробуйте еще:`);
+  }
 
+    if (input === null) {
+        break;
+    }
 
-if (input === null){
-   alert(total) 
+    total = total + Number(input);
+    
 }
 
-
-читать про циклы
+alert(`Общая сумма чисел равна ` + total);

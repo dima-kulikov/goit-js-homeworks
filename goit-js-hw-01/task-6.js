@@ -12,7 +12,8 @@ while (input !== null) {
         break;
     }
 
-    total = total + Number(input);
+    input = Number (input) // превращаем в число
+    total = total + input;
     
 }
 

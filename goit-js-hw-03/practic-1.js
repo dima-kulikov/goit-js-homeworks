@@ -1,28 +1,28 @@
-let a = 5;
-let b = 10;
+// let a = 5;
+// let b = 10;
 
 
-const product = {
-    name: "Dima",
-    description:"учеба js курсы онлайн.",
-    price:30,
-    say: () => {
-       return (a + b)
-    }
-};
-const key = 'price';
-product.price = 50;
-product.say();
-product.say()
+// const product = {
+//     name: "Dima",
+//     description:"учеба js курсы онлайн.",
+//     price:30,
+//     say: () => {
+//        return (a + b)
+//     }
+// };
+// const key = 'price';
+// product.price = 50;
+// product.say();
+// product.say()
 
-console.log(product.say())
+// console.log(product.say())
 
 
-console.log(product["description"])
-console.log(product.price)
-console.log(product)
-delete product.name;
-console.log(product)
+// console.log(product["description"])
+// console.log(product.price)
+// console.log(product)
+// delete product.name;
+// console.log(product)
 // -----------------------------------------------------------------------
 // const makeproduct = (name, prise, desc) =>{
 //     return{
@@ -50,17 +50,36 @@ console.log(product)
 
 // const obj = {
 //     a:1,
+//     [key]: value
 // };
 // console.log(obj)
 
 // obj[key] = value;
-// obj["hui"] = '25 см'
-
 // obj.loh = 'lopol '
 
 // console.log(obj)
+// -----------------------------------------------------------------------
 
 
+// const man = {
+// name:"Dima",
+// age: 33,
+// height: 188,
+// chengeHeight: function(){}
+// chengeHeight(newHeight){
+    // console.log(newHeight)
+//     this.height = newHeight;
+// }
+ 
+// };
+
+// man.chengeHeight(200)
+
+// console.log(man.height)
+
+// -----------------------------------------------------------------------
+ 
+// 20 минута   https://www.youtube.com/watch?time_continue=1206&v=RU6l75P042A&feature=emb_logo
 
 
 

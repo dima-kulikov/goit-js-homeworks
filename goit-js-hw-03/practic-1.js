@@ -83,8 +83,43 @@
 
 
 
+// const storage = {
+//     items: [
+//         { id:"id-1", name:"apples", price: 30},
+//         { id:"id-2", name:"grapes", price: 40},
+    
+//     ],
+//     getItem(){
+//         return this.items;
+//         // console.log( this.items)
+//     },
+//     addproduct(product){
+//        this.items.push(product);
+//     }
+// };
 
+// storage.addproduct ({id:"id-3",name:"carrots",price:20,});
+// console.table(storage.getItem());
+// console.table(storage.addproduct());
+// storage.addproduct ({id:"id-3",name:"carrots",price:20,});
 
+// -----------------------------------------------------------------
 
-
-
+    const storage = {
+        items: [
+            { id:"id-1", name:"apples", price: 30},
+            { id:"id-2", name:"grapes", price: 40},
+        
+        ],
+    
+     noviTovar(tovar){
+        this.items.push(tovar);
+    
+     }
+    };
+    storage.noviTovar({id:"id-3", name:"grapes", price: 22,});
+    console.table(storage.items);
+    console.table(storage.noviTovar());
+    console.table(storage.items);
+    
+    

@@ -1,5 +1,5 @@
-// let a = 5;
-// let b = 10;
+let a = 5;
+let b = 10;
 
 
 // const product = {
@@ -91,35 +91,34 @@
 //     ],
 //     getItem(){
 //         return this.items;
-//         // console.log( this.items)
 //     },
 //     addproduct(product){
 //        this.items.push(product);
-//     }
+//     },
+
+//     removeproduct(id){
+//      }
 // };
 
+
+// storage.removeproduct('id-2')
+
 // storage.addproduct ({id:"id-3",name:"carrots",price:20,});
+// console.table(storage.items)
+
+
 // console.table(storage.getItem());
 // console.table(storage.addproduct());
 // storage.addproduct ({id:"id-3",name:"carrots",price:20,});
 
-// -----------------------------------------------------------------
 
-    const storage = {
-        items: [
-            { id:"id-1", name:"apples", price: 30},
-            { id:"id-2", name:"grapes", price: 40},
-        
-        ],
+// const obj = {};
+// const arr = ['apple', 'orange', 'banana', 'tomato', 'peper'];
+
+// for (let i = 0; i < arr.length; i++) {
+//     obj[i] = arr[i];
+// }
+
+// console.log(obj);
     
-     noviTovar(tovar){
-        this.items.push(tovar);
-    
-     }
-    };
-    storage.noviTovar({id:"id-3", name:"grapes", price: 22,});
-    console.table(storage.items);
-    console.table(storage.noviTovar());
-    console.table(storage.items);
-    
-    
+// console.log(obj[3])

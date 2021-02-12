@@ -24,18 +24,21 @@ user.hobby = 'skydiving';
 console.log(user)
 
 // 3.заменяет значение premium на false
-// ?????
+user.premium = false;
+console.log(user.premium)
 
 // 4.выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
 
-const key = Object.keys(user);
-console.log(key)
+const keyUser = Object.keys(user);
+console.log(keyUser)
 const values = Object.values(user);
 console.log(values)
 
-
+// через for in
 for (const key in user) {
     console.log(`${key}: ${user[key]}`);
   }
-
-
+// через for of
+for(const key of keyUser){
+  console.log(`${key}: ${user[key]}`);
+}

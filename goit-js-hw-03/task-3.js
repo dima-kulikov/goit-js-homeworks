@@ -2,6 +2,8 @@
 // Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
 
 
+let max = 0;
+
 const findBestEmployee = function(employees) {
   const values = Object.values(employees);
   console.log(values);
@@ -12,38 +14,23 @@ const findBestEmployee = function(employees) {
   let max = Math.max.apply(null, values);
   console.log(max);
 
-// let ansver = Object.entries(employees);
-//     console.log(ansver);
 
-
-const   getKeyByValue = function( value ) {
-        for( var prop in this ) {
-            if( this.hasOwnProperty( prop ) ) {
-                 if( this[ prop ] === value )
-                     return prop;
-            }
-        }
+  const getKeyByValue = function(value) {
+    for (var prop in this) {
+      if (this.hasOwnProperty(prop)) {
+        if (this[prop] === value)
+          return prop;
+      }
     }
+  }
+  let itog = employees.getKeyByValue(max);
+  console.log(itog);
+  console.log(employees.getKeyByValue(max));
 
-    let key = employees.getKeyByValue(max);
-    console.log(key); 
-    console.log(key, max);
 
-return (`${key}: ${max}`)
 
+return (`${itog}: ${max}`)
 };
-
-
-
-const getKeyByValue = function( value ) {
-    for( var prop in this ) {
-        if( this.hasOwnProperty( prop ) ) {
-             if( this[ prop ] === value )
-                 return prop;
-        }
-    }
-}
-
 
 
 
@@ -59,7 +46,7 @@ console.log(
   }),
 ); // lorence
 
-
+// console.log(employees.getKeyByValue(29));
 console.log(
   findBestEmployee({
     poly: 12,
@@ -76,6 +63,7 @@ console.log(
     chelsy: 38,
   }),
 ); // lux
+
 
 
 

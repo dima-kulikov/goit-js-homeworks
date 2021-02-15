@@ -16,7 +16,7 @@ const findBestEmployee = function(employees) {
 //     console.log(ansver);
 
 
-   getKeyByValue = function( value ) {
+const   getKeyByValue = function( value ) {
         for( var prop in this ) {
             if( this.hasOwnProperty( prop ) ) {
                  if( this[ prop ] === value )
@@ -26,15 +26,16 @@ const findBestEmployee = function(employees) {
     }
 
     let key = employees.getKeyByValue(max);
-
     console.log(key); 
+    console.log(key, max);
 
-return (` ${key}: ${max}`)
+return (`${key}: ${max}`)
+
 };
 
 
 
-getKeyByValue = function( value ) {
+const getKeyByValue = function( value ) {
     for( var prop in this ) {
         if( this.hasOwnProperty( prop ) ) {
              if( this[ prop ] === value )
@@ -42,6 +43,9 @@ getKeyByValue = function( value ) {
         }
     }
 }
+
+
+
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.

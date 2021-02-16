@@ -2,36 +2,40 @@
 // Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
 
 
-let max = 0;
-
-const findBestEmployee = function(employees) {
-  const values = Object.values(employees);
-  console.log(values);
-
-//   const key = Object.keys(employees)
-//   console.log(key)
-
-  let max = Math.max.apply(null, values);
-  console.log(max);
 
 
-  const getKeyByValue = function(value) {
-    for (var prop in this) {
-      if (this.hasOwnProperty(prop)) {
-        if (this[prop] === value)
-          return prop;
-      }
-    }
+// -------------------------------------------- ВАРИАНТ -1------------------
+
+// const findBestEmployee = function(employees) {
+//   const values = Object.values(employees);
+
+//   let max = Math.max.apply(null, values);
+
+//   const getKeyByValue = function(value) {
+//     for (var prop in employees) {
+//       if (employees.hasOwnProperty(prop)) {
+//         if (employees[prop] === value)
+//           return prop;
+//       }
+//     }
+//   }
+//   let itog = getKeyByValue(max);
+//   console.log(itog);
+//   console.log(getKeyByValue(max));
+
+// return (`${itog}: ${max}`)
+// };
+
+// -------------------------------------------- ВАРИАНТ -2------------------
+
+const findBestEmployee = (employees) => {
+  const maxValue = Math.max(...Object.values(employees));
+
+  for (let employee in employees) {
+    if (employees[employee] === maxValue)
+      return employee;
   }
-  let itog = employees.getKeyByValue(max);
-  console.log(itog);
-  console.log(employees.getKeyByValue(max));
-
-
-
-return (`${itog}: ${max}`)
 };
-
 
 
 /*

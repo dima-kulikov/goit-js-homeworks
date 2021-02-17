@@ -9,14 +9,33 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
+// for(let i=0; i < this.products.length; i+=1){
+//   console.log(this.products[i])
+//   };
+
+
 const calculateTotalPrice = function(allProdcuts, productName) {
     for (const product of allProdcuts) {
-        console.log(product)
+        console.log(product.name);
 
+        if( product.name === productName){
+
+          return product.price*product.quantity
     }
-return ansver
-// };
 };
+};
+
+// productName = function findCherries(nameinObj) {
+// let myName = nameinObj.name;
+// if( nameinObj.name === 'Радар'){
+//  let pp = products.price*products.quantity
+//  console.log(nameinObj.name);
+//  console.log(pp)
+//  return pp
+// }
+//   console.log(nameinObj.name)
+// }
+// console.log(products.find(productName));
 
 
 

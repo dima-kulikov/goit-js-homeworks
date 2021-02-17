@@ -13,7 +13,7 @@ const calculateTotalPrice = function(allProdcuts, productName) {
     for (const product of allProdcuts) {
         console.log(product)
 
-
+    }
 return ansver
 // };
 };

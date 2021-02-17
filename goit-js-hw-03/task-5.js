@@ -8,17 +8,16 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function(arr, prop) {
- let value =[];
- for (const product of arr){
-    value.push(product[prop]);
+const getAllPropValues = function (arr, prop) {
+  let value = [];
+  for (const product of arr) {
 
-//    if (prop in product){
-//     value.push(product[prop]);
-//    };
+    if (prop in product) {
+      value.push(product[prop]);
+    };
 
-};
-   return value;
+  };
+  return value;
 };
 
 

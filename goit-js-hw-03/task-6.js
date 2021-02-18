@@ -9,21 +9,29 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-// for(let i=0; i < this.products.length; i+=1){
-//   console.log(this.products[i])
-//   };
+// -------- ВАРИАН 1 ----------
+// const myWork = function(allProdcuts, productName) {
+//     for (const product of allProdcuts) {
+//         console.log(product.name);
+//         if( product.name === productName){
+//           return product.price*product.quantity
+//     }
+// };
+// };
+// -------- ВАРИАН 2 ---------- 
+const myWork = function(masiv, name){
+ let ansver = masiv.find(myName => myName.name === name);
+ console.log(ansver)
+ return (ansver.price*ansver.quantity);
+}
 
 
-const calculateTotalPrice = function(allProdcuts, productName) {
-    for (const product of allProdcuts) {
-        console.log(product.name);
+console.log(myWork(products, 'Радар')); // 5200
+console.log(myWork(products, 'Сканер')); 
+console.log(myWork(products, 'Дроид')); // 2800
 
-        if( product.name === productName){
 
-          return product.price*product.quantity
-    }
-};
-};
+
 
 // productName = function findCherries(nameinObj) {
 // let myName = nameinObj.name;
@@ -36,9 +44,3 @@ const calculateTotalPrice = function(allProdcuts, productName) {
 //   console.log(nameinObj.name)
 // }
 // console.log(products.find(productName));
-
-
-
-console.log(calculateTotalPrice(products, 'Радар')); // 5200
-console.log(calculateTotalPrice(products, 'Сканер')); 
-console.log(calculateTotalPrice(products, 'Дроид')); // 2800

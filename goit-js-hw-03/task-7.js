@@ -13,30 +13,32 @@ const uploads = [
     {name:'techno', percentage:70}
 ];
 
-function findProcent(nameMassiv, procent){
+// function findProcent(nameMassiv, procent){
 
-let ansver = nameMassiv.find(key => key.percentage > 20);
-let newuploads =[];
-
-// for ( let i = 0; i< ansver.lenght; i++){
-    // if(ansver > procent ){
-        // newuploads.push(ansver);
-    // }
-    // return newuploads
+// let ansver = nameMassiv.find(key => key.percentage > 20);
+// let newuploads =[];
+// console.log(ansver)
+// newuploads.push(ansver);
+// console.log(newuploads)
+// return newuploads
+// // return ansver 
 // }
 
-console.log(ansver)
 
-    newuploads.push(ansver);
+function findProcent(nameMassiv, procent){
+    let newuploads =[];
+for (const key of nameMassiv) {
+console.log(key)
 
-
-console.log(newuploads)
-
+    if( key.percentage >= procent){
+        
+     newuploads.push(key);
+    }
+}
 return newuploads
-// return ansver 
 }
 
 
-// console.log(findProcent(uploads, 5));
-// console.log(findProcent(uploads, 45));
 console.log(findProcent(uploads, 10));
+console.log(findProcent(uploads, 45));
+console.log(findProcent(uploads, 60));

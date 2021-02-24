@@ -13,32 +13,62 @@ const uploads = [
     {name:'techno', percentage:70}
 ];
 
-// function findProcent(nameMassiv, procent){
-
-// let ansver = nameMassiv.find(key => key.percentage > 20);
-// let newuploads =[];
-// console.log(ansver)
-// newuploads.push(ansver);
-// console.log(newuploads)
-// return newuploads
-// // return ansver 
-// }
-
+// ---------------------------while----------------
 
 function findProcent(nameMassiv, procent){
-    let newuploads =[];
+    
 for (const key of nameMassiv) {
-console.log(key)
+    let newuploads =[];
+    console.log(key)
+    while(key.percentage > procent) {
+        newuploads.push(key);
+        return newuploads
+    };
 
-    if( key.percentage >= procent){
-        
-     newuploads.push(key);
-    }
-}
-return newuploads
-}
-
+};
+};
 
 console.log(findProcent(uploads, 10));
 console.log(findProcent(uploads, 45));
 console.log(findProcent(uploads, 60));
+
+// -----------------------do-----while----------------------------------
+// function findProcent(nameMassiv, procent){
+//     let newuploads =[];
+//     for (const key of nameMassiv) {
+//         console.log(key)
+//         console.log(key.percentage)
+        
+//         do{
+//             newuploads.push(key);
+            
+            
+//         }
+//         while(key > procent) 
+        
+//     }
+//     return newuploads
+// }
+
+// console.log(findProcent(uploads, 10));
+// console.log(findProcent(uploads, 45));
+// console.log(findProcent(uploads, 60));
+
+
+// -----------------for----of---------------------------
+// function findProcent(nameMassiv, procent){
+//     let newuploads =[];
+// for (const key of nameMassiv) {
+// console.log(key)
+
+//     if( key.percentage >= procent){
+        
+//      newuploads.push(key);
+//     }
+// }
+// return newuploads
+// }
+
+// console.log(findProcent(uploads, 10));
+// console.log(findProcent(uploads, 45));
+// console.log(findProcent(uploads, 60));

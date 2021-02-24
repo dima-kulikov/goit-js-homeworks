@@ -15,21 +15,21 @@ const uploads = [
 
 // ---------------------------while----------------
 
-function findProcent(nameMassiv, procent){
-    let newuploads =[];
-for (const key of nameMassiv) {
-    console.log(key)
-    while(key.percentage > procent) {
-        newuploads.push(key);
-        
-    };
-};
-return newuploads
-};
+// function findProcent(nameMassiv, procent){
+// let newuploads =[];
+// for (const key of nameMassiv)  {
+//     console.log(key)
+//     while(key.percentage > procent) {
+//         newuploads.push(key);
+//       break;  
+//     };
+// };
+// return newuploads
+// };
 
-console.log(findProcent(uploads, 10));
-console.log(findProcent(uploads, 45));
-console.log(findProcent(uploads, 60));
+// console.log(findProcent(uploads, 10));
+// console.log(findProcent(uploads, 45));
+// console.log(findProcent(uploads, 60));
 
 // -----------------------do-----while----------------------------------
 // function findProcent(nameMassiv, procent){

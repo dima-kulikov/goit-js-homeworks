@@ -16,16 +16,15 @@ const uploads = [
 // ---------------------------while----------------
 
 function findProcent(nameMassiv, procent){
-    
-for (const key of nameMassiv) {
     let newuploads =[];
+for (const key of nameMassiv) {
     console.log(key)
     while(key.percentage > procent) {
         newuploads.push(key);
-        return newuploads
+        
     };
-
 };
+return newuploads
 };
 
 console.log(findProcent(uploads, 10));

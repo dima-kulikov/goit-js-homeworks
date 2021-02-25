@@ -37,14 +37,10 @@ const uploads = [
 //     for (const key of nameMassiv) {
 //         console.log(key)
 //         console.log(key.percentage)
-        
 //         do{
 //             newuploads.push(key);
-            
-            
 //         }
 //         while(key > procent) 
-        
 //     }
 //     return newuploads
 // }

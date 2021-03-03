@@ -1,5 +1,5 @@
-let a = 5;
-let b = 10;
+// let a = 5;
+// let b = 10;
 
 
 // const product = {
@@ -83,35 +83,35 @@ let b = 10;
 
 
 
-const storage = {
-    items: [
-        { id:"id-1", name:"apples", price: 30},
-        { id:'id-2', name:"grapes", price: 40},
+// const storage = {
+//     items: [
+//         { id:"id-1", name:"apples", price: 30},
+//         { id:'id-2', name:"grapes", price: 40},
     
-    ],
-    getItem(){
-        return this.items;
-    },
-    addproduct(product){
-       this.items.push(product);
-    },
+//     ],
+//     getItem(){
+//         return this.items;
+//     },
+//     addproduct(product){
+//        this.items.push(product);
+//     },
 
-    removeProduct(id){
-        for (let i=0; i < this.items.length; i += 1){
-           console.log(this.items[i]);
+//     removeProduct(id){
+//         for (let i=0; i < this.items.length; i += 1){
+//            console.log(this.items[i]);
         
-        if(this.items[i].id === id){
-            console.log("helo!!!!!!!!!!!")
-        }
-        }
-     }
-};
+//         if(this.items[i].id === id){
+//             console.log("helo!!!!!!!!!!!")
+//         }
+//         }
+//      }
+// };
 
 
-storage.removeProduct('id-2')
+// storage.removeProduct('id-2')
 
 // storage.addproduct ({id:"id-3",name:"carrots",price:20,});
-console.table(storage.items)
+// console.table(storage.items)
 
 
 // console.table(storage.getItem());
@@ -129,3 +129,9 @@ console.table(storage.items)
 // console.log(obj);
     
 // console.log(obj[3])
+
+// ---------------------------------------------------------------
+
+const add = (a,b,c) => a+b+c;
+
+console.log(add)

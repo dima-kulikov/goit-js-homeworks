@@ -1,3 +1,6 @@
+
+// ФУНКЦИИ ОБРАТНОГО ВЫЗОВА
+
 // const printMessage = function (message) {
 //     console.log(message);
 //   };
@@ -58,30 +61,33 @@
 //   console.log(labels);
 // -----------------------------------------------------
 
-const fruits = [
-    { name: 'apples', quantity: 200, isFresh: true },
-    { name: 'grapes', quantity: 150, isFresh: false },
-    { name: 'bananas', quantity: 100, isFresh: true },
-  ];
+// const fruits = [
+//     { name: 'apples', quantity: 200, isFresh: true },
+//     { name: 'grapes', quantity: 150, isFresh: false },
+//     { name: 'bananas', quantity: 100, isFresh: true },
+//   ];
 
-const filter = function (array, test) {
-    const filteredElements = [];
+// const filter = function (array, test) {
+//     const filteredElements = [];
   
-    for (const element of array) {
-      const passed = test(element);
-  console.log(element)
-      if (passed) {
-        filteredElements.push(element);
-      }
-    }
+//     for (const element of array) {
+//       const passed = test(element);
+//   console.log(element)
+//       if (passed) {
+//         filteredElements.push(element);
+//       }
+//     }
   
-    return filteredElements;
-  };
+//     return filteredElements;
+//   };
   
 
   
-  const freshFruits = filter(fruits, fruit => fruit.isFresh);
-  console.log(freshFruits); 
+//   const freshFruits = filter(fruits, fruit => fruit.isFresh);
+//   console.log(freshFruits); 
   
-  const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
-  console.log(fruitsWithQuantity);
+//   const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
+//   console.log(fruitsWithQuantity);
+
+
+  //Контекст выполнения и стек вызововconst createCounter = function () {

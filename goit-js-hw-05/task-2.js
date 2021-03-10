@@ -1,9 +1,4 @@
 class User {
-
-
-
-
-    
     constructor(name, age, followers){
         this.name = name;
         this.age = age;

@@ -54,25 +54,27 @@
 
 // -----------------СОЗДАНИЕ МЕНЕДЖЕРА ЧЕРЕЗ КОНСТРУКТОР
 
-const Manager = function (name = 'manager', sales = 0) {
-    this.name = name;
-    this.sales = sales;
+// const Manager = function (name = 'manager', sales = 0) {
+//     this.name = name;
+//     this.sales = sales;
   
-    this.sell = function (product) {
-      this.sales += 1;
-      return `Manager ${this.name} sold ${product}.`;
-    };
-  };
+//     this.sell = function (product) {
+//       this.sales += 1;
+//       return `Manager ${this.name} sold ${product}.`;
+//     };
+//   };
   
-  const mango = new Manager('Mango', 5);
-  console.log(mango.sales); 
-  console.log(mango.sell('TV'));
-  console.log(mango.sell('Microwave'));
-    console.log(mango.sales); 
+//   const mango = new Manager('Mango', 5);
+//   console.log(mango.sales); 
+//   console.log(mango.sell('TV'));
+//   console.log(mango.sell('Microwave'));
+//     console.log(mango.sales); 
   
-  const poly = new Manager('Poly', 10);
-  console.log(poly.sales); 
-  console.log(poly.sell('TV')); 
-  console.log(poly.sell('Microwave')); 
-  console.log(poly.sales); 
+//   const poly = new Manager('Poly', 10);
+//   console.log(poly.sales); 
+//   console.log(poly.sell('TV')); 
+//   console.log(poly.sell('Microwave')); 
+//   console.log(poly.sales); 
+
+// -------------------------------
 

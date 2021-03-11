@@ -10,14 +10,15 @@ this.addItem = function(banana){
     return items.push(banana);
 };
 }};
-const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Железные жупи', 'Антигравитатор']); 
+const storage = new Storage(['Яблоко', 'Киви', 'Арбуз', 'Ананас']); 
 
   const items = storage.getItems();
   console.log(items)
 
 
-  storage.addItem('Дроид');
-  console.log(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+  storage.addItem('ПОМИДОР');
+  console.log(storage);
+  console.log(items);
   
 //   storage.removeItem('Пролонгер');
 //   console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

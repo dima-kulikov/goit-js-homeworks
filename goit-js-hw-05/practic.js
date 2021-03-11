@@ -2,9 +2,9 @@
 //     apple: 50,
 // banana: 4,
 // price:5,
-// // priseoll(){
-// //  return this.banana*this.price
-// // },
+// priseoll(){
+//  return this.banana*this.price
+// },
 // all(){
 //     return this.apple*this.price
 // }
@@ -76,5 +76,25 @@
 //   console.log(poly.sell('Microwave')); 
 //   console.log(poly.sales); 
 
-// -------------------------------
+// ------------------Делаем Счетчик-----
+
+const Counter = function({Value = 0, step = 1}){
+this.Value = Value;
+this.step = step;
+// this.inc = function(){
+//      this.Value += this.step;
+// }
+};
+
+Counter.prototype.inc = function(){
+    this.Value += this.step
+}
+
+const counter = new Counter({Value: 10, step: 5});
+
+console.log(counter.Value)
+counter.inc();
+console.log(counter.Value)
+
+
 

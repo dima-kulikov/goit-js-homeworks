@@ -1,24 +1,32 @@
+
 class Storage {
-constructor (apple){
-    this.apple = apple;
-    // - возвращает массив текущих товаров
-    this.getItems = function(){
-        return this.apple;
+
+    constructor (items){
+        this.items = items;
     };
-    // - получает новый товар и добавляет его к текущим
-this.addItem = function(banana){
-    return items.push(banana);
-};
-}};
-const storage = new Storage(['Яблоко', 'Киви', 'Арбуз', 'Ананас']); 
+        // getItems (){
+        //    return this.items;
+        // };
+        
+        // addItem(item){
+        // return this.items.push(item);
+        // };
 
-  const items = storage.getItems();
-  console.log(items)
+        // removeItem(item){
+        //     this.items = this.items.filter((n) => {return n != item});
+        // }
+    };
+    Storage.prototype.getItems = function() { return this.items;}
+    Storage.prototype.addItem = function(item) { return this.items.push(item);}
+    Storage.prototype.removeItem = function(item) { this.items = this.items.filter((n) => {return n != item});}
 
+    const storage = new Storage(["Яблоко", "Киви", "Арбуз", "Ананас"]); 
+    
+    storage.getItems();
+    storage.addItem("МАНГО") 
+    storage.removeItem("Яблоко") 
+    console.log(storage.getItems())
+     
+   
+    
 
-  storage.addItem('ПОМИДОР');
-  console.log(storage);
-  console.log(items);
-  
-//   storage.removeItem('Пролонгер');
-//   console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

@@ -21,7 +21,7 @@ class Storage {
     Storage.prototype.removeItem = function(item) { this.items = this.items.filter((n) => {return n != item});}
 
     const storage = new Storage(["Яблоко", "Киви", "Арбуз", "Ананас"]); 
-    
+    console.log(storage)
     storage.getItems();
     storage.addItem("МАНГО") 
     storage.removeItem("Яблоко") 

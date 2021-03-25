@@ -43,6 +43,7 @@ class Car {
    */
   turnOn() {
     this.isOn = true;
+   
   }
 
   /*
@@ -50,26 +51,40 @@ class Car {
    * Записывает в свойство isOn значение false,
    * и сбрасывает текущую скорость в 0
    */
-  // turnOff() {}
+  turnOff() {
+    this.isOn = false;
+    this.speed = 0;
+  }
 
   /*
    * Добавялет к свойству speed полученное значение,
    * при условии что результирующая скорость
    * не больше чем значение свойства maxSpeed
    */
-  // accelerate(value) {}
-
+  accelerate(value) {
+    if( value < this.maxSpeed){
+      return this.speed = value;
+    }
+  }
   /*
    * Отнимает от свойства speed полученное значение,
    * при условии что результирующая скорость не меньше нуля
    */
-  // decelerate(value) {}
+  decelerate(value) {
+    if( this.speed > 0){
+        return this.speed = this.speed - value
+    }
+  }
 
   /*
    * Добавляет в поле distance киллометраж (hours * speed),
    * но только в том случае если машина заведена!
    */
-  // drive(hours) {}
+  drive(hours) {
+    if(this.isOn = true){
+        return this.distance = hours * this.speed;
+    }
+  }
 }
 
 const mustang = new Car({ maxSpeed: 200, price: 2000 });
@@ -79,16 +94,21 @@ console.log(mustang.isOn)
 
 
 mustang.accelerate(50);
+console.log(mustang.speed)
 mustang.drive(2);
+console.log(mustang.distance)
 
 Car.getSpecs(mustang);
+console.log(mustang)
 // maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
 
 mustang.decelerate(20);
+console.log(mustang.speed)
 mustang.drive(1);
 mustang.turnOff();
 
 Car.getSpecs(mustang);
+console.log(mustang)
 // maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000
 
 console.log(mustang.price); // 2000

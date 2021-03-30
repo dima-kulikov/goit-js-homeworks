@@ -54,7 +54,7 @@
 
 // 2. Array.prototype.forEach()
 
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
 // Классический for
 // for (let i = 0; i < numbers.length; i += 1) {
@@ -62,6 +62,10 @@ const numbers = [1, 2, 3];
 // }
 
 // Функциональный forEach
-numbers.forEach(num => console.log(num));
+// numbers.forEach(num => console.log(num));
 // Указываем параметр idx если нужен доступ к счетчику
-numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// --------------------------------------------
+
+// 3. Array.prototype.map()
+

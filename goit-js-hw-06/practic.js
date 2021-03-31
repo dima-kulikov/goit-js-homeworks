@@ -69,3 +69,63 @@
 
 // 3. Array.prototype.map()
 
+// const numbers = [1, 2, 3];
+// const numberTwo = numbers.map(i=>i*5);
+
+// console.log(numberTwo)
+// --------------------------------------------
+
+// const users = [
+//     { name: 'Mango', isActive: true },
+//     { name: 'Poly', isActive: false },
+//     { name: 'Ajax', isActive: true },
+//   ];
+
+//   const nameUser = users.map(i=>i.name);
+
+//   console.log(nameUser)
+// ----------------------------------------------
+
+// 4. Array.prototype.filter()
+
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// console.log(numbers.filter(i=>i>5));
+// console.log(numbers.filter(i=>i<3))
+// ----------------------------------------------------
+// const users = [
+//     { name: 'Mango', isActive: true },
+//     { name: 'Poly', isActive: false },
+//     { name: 'Ajax', isActive: true },
+//     { name: 'Chelsey', isActive: false },
+//   ];
+
+//   console.log(users.filter(i=>i.isActive))
+//   console.log(users.filter(i=>!i.isActive))
+// ------------------------------------------------------
+
+// 5. Array.prototype.find()
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const myNumber = numbers.find(i =>  i > 5);
+
+// console.log(numbers.find(i=> i>7))
+// console.log(myNumber)
+// -----------------------------------------
+
+// const users = [
+//     { id: '000', name: 'Mango', isActive: true },
+//     { id: '001', name: 'Poly', isActive: false },
+//     { id: '002', name: 'Ajax', isActive: true },
+//     { id: '003', name: 'Chelsey', isActive: false },
+//   ];
+
+//   const user = users.find(i=> i.id =="002");
+// user.name ="pavel"
+//   console.log(user)
+
+//   const getUserById = (arr, id) => arr.find(x => x.id === id);
+
+// console.log(getUserById(users, '001'));
+// console.log(getUserById(users, '003'));
+// ------------------------------------------------

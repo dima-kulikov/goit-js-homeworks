@@ -129,3 +129,5 @@
 // console.log(getUserById(users, '001'));
 // console.log(getUserById(users, '003'));
 // ------------------------------------------------
+
+// 6. Array.prototype.every() и Array.prototype.some()

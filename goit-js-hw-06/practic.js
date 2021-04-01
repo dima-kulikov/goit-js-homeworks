@@ -131,3 +131,50 @@
 // ------------------------------------------------
 
 // 6. Array.prototype.every() и Array.prototype.some()
+
+// const isBib = value=> value>=10;
+
+// console.log([4,88,25,3,48,41,2,68].every(isBib))
+// console.log([88,25,48,41,68].every(isBib))
+
+// console.log([4,88,25,3,48,41,2,68].some(isBib))
+
+// --------------------------------------
+
+// const fruits = [
+//     { name: 'apples', amount: 100 },
+//     { name: 'bananas', amount: 0 },
+//     { name: 'grapes', amount: 50 },
+//   ];
+
+//   const fruitPrise = fruits.every(value=> value.amount > 0);
+//   const fruitPrise2 = fruits.some(value=> value.amount > 0);
+
+//   console.log(fruitPrise)
+//   console.log(fruitPrise2)
+//   -------------------------------------------------
+
+// 7. Array.prototype.reduce()
+
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const sum = numbers.reduce((ac, value) => ac + value,0);
+// console.log(sum)
+// --------------------------------------------------
+
+const tweets = [
+    { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+    { id: '001', likes: 2, tags: ['html', 'css'] },
+    { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+    { id: '003', likes: 8, tags: ['css', 'react'] },
+    { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+  ];
+
+//   const ollLikes = tweets.reduce((like, total) => like +total.likes,0);
+
+//   console.log(ollLikes)
+
+  const ollLike = tweets => tweets.reduce((like, total) => like + total.likes,0);
+  console.log(ollLike(tweets));
+
+

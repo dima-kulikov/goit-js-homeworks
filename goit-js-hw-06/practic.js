@@ -162,19 +162,135 @@
 // console.log(sum)
 // --------------------------------------------------
 
-const tweets = [
-    { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-    { id: '001', likes: 2, tags: ['html', 'css'] },
-    { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-    { id: '003', likes: 8, tags: ['css', 'react'] },
-    { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
-  ];
+// const tweets = [
+//     { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//     { id: '001', likes: 2, tags: ['html', 'css'] },
+//     { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//     { id: '003', likes: 8, tags: ['css', 'react'] },
+//     { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+//   ];
+  
+// const tweets44 = [
+//   { id: '000', likes: 52, tags: ['js534', 'nodejs'] },
+//   { id: '001', likes: 42, tags: ['html', 'css'] },
+//   { id: '002', likes: 157, tags: ['html345', 'js53', 'nodejs'] },
+//   { id: '003', likes: 84, tags: ['css', 'react'] },
+//   { id: '004', likes: 50, tags: ['js', 'nodejs', 'react'] },
+// ];
+// //   const ollLikes = tweets.reduce((like, total) => like +total.likes,0);
 
-//   const ollLikes = tweets.reduce((like, total) => like +total.likes,0);
+// //   console.log(ollLikes)
 
-//   console.log(ollLikes)
+//   const ollLike = tweets44 => tweets44.reduce((like, total) => like + total.likes,0);
+//   console.log(ollLike(tweets44));
+  // ----------------------------------------------
 
-  const ollLike = tweets => tweets.reduce((like, total) => like + total.likes,0);
-  console.log(ollLike(tweets));
+  // const tweets = [
+  //   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  //   { id: '001', likes: 2, tags: ['html', 'css'] },
+  //   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  //   { id: '003', likes: 8, tags: ['css', 'react'] },
+  //   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+  // ];
+
+  // // const tags = tweets.reduce((allTags,value)=>{
+  // // allTags.push(...value.tags);
+  // // return allTags;
+  // // },[]);
+
+  // // console.log(tags)
+  // // -----------------------------
+  // const getTags = tweets => tweets.reduce((allTags,value)=>{
+  //   allTags.push(...value.tags);
+  //   return allTags;
+  //   },[]);
+  
+  //   console.log(getTags(tweets44));
+    // // -----------------------------
+
+//     const tweets = [
+//       { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//       { id: '001', likes: 2, tags: ['html', 'css'] },
+//       { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//       { id: '003', likes: 8, tags: ['css', 'react'] },
+//       { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+//     ];
+    
+//     const getTags = tweets =>
+//       tweets.reduce((allTags, tweet) => {
+//         allTags.push(...tweet.tags);
+    
+//         return allTags;
+//       }, []);
+    
+// console.log(getTags(tweets))
+
+//     const tags = getTags(tweets);
 
 
+//     const getTagStats = (acc, tag) => {
+//       if (!acc.hasOwnProperty(tag)) {
+//         acc[tag] = 0;
+//       }
+    
+//       acc[tag] += 1;
+    
+//       return acc;
+//     };
+    
+//     // Начальное значение аккумулятора это пустой объект {}
+//     const countTags = tags => tags.reduce(getTagStats, {});
+
+//     console.log(countTags(tags))
+
+// -----------------------------------
+// 8. Array.prototype.sort()  
+
+// const numbers = [1,3,6,9,2,5,8,2,];
+
+// console.log(numbers)
+// console.log(numbers.sort())
+
+// const fruits = ['banana', 'arbuz', 'aple', 'kivi'];
+
+// console.log(fruits)
+// console.log(fruits.sort())
+// ---------------------------------
+
+// 8.1. Свой порядок сортировки
+
+// const users = [
+//   { name: 'Mango', daysActive: 15 },
+//   { name: 'Poly', daysActive: 4 },
+//   { name: 'Ajax', daysActive: 27 },
+//   { name: 'Chelsey', daysActive: 2 },
+// ];
+
+
+// const userDey = (a,b)=> a.daysActive - b.daysActive;
+
+// console.log(users.sort(userDey))
+// --------------------------------
+ 
+// 9. Цепочки методов массива
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const even = numbers.filter(x => x % 2 === 0);
+// console.log(even)
+
+// const doubled = even.map(x => x * 2);
+// console.log(doubled)
+
+// const reversed = doubled.reverse();
+// console.log(reversed)
+// ----------------------------------
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const rezult = numbers
+.filter(x=>x%2===0)
+.map(x=>x*2)
+.reverse()
+
+console.log(rezult)

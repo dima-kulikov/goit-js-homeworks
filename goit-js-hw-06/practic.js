@@ -294,3 +294,4 @@ const rezult = numbers
 .reverse()
 
 console.log(rezult)
+// -------------------------------------------

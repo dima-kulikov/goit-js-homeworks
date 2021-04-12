@@ -208,40 +208,40 @@
   //   console.log(getTags(tweets44));
     // // -----------------------------
 
-//     const tweets = [
-//       { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-//       { id: '001', likes: 2, tags: ['html', 'css'] },
-//       { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-//       { id: '003', likes: 8, tags: ['css', 'react'] },
-//       { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
-//     ];
+    const tweets = [
+      { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+      { id: '001', likes: 2, tags: ['html', 'css'] },
+      { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+      { id: '003', likes: 8, tags: ['css', 'react'] },
+      { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+    ];
     
-//     const getTags = tweets =>
-//       tweets.reduce((allTags, tweet) => {
-//         allTags.push(...tweet.tags);
+    const getTags = tweets =>
+      tweets.reduce((allTags, tweet) => {
+        allTags.push(...tweet.tags);
     
-//         return allTags;
-//       }, []);
+        return allTags;
+      }, []);
     
-// console.log(getTags(tweets))
+console.log(getTags(tweets))
 
-//     const tags = getTags(tweets);
+    const tags = getTags(tweets);
 
 
-//     const getTagStats = (acc, tag) => {
-//       if (!acc.hasOwnProperty(tag)) {
-//         acc[tag] = 0;
-//       }
+    const getTagStats = (acc, tag) => {
+      if (!acc.hasOwnProperty(tag)) {
+        acc[tag] = 0;
+      }
     
-//       acc[tag] += 1;
+      acc[tag] += 1;
     
-//       return acc;
-//     };
+      return acc;
+    };
     
-//     // Начальное значение аккумулятора это пустой объект {}
-//     const countTags = tags => tags.reduce(getTagStats, {});
+    // Начальное значение аккумулятора это пустой объект {}
+    const countTags = tags => tags.reduce(getTagStats, {});
 
-//     console.log(countTags(tags))
+    console.log(countTags(tags))
 
 // -----------------------------------
 // 8. Array.prototype.sort()  
@@ -286,12 +286,12 @@
 // console.log(reversed)
 // ----------------------------------
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const rezult = numbers
-.filter(x=>x%2===0)
-.map(x=>x*2)
-.reverse()
+// const rezult = numbers
+// .filter(x=>x%2===0)
+// .map(x=>x*2)
+// .reverse()
 
-console.log(rezult)
+// console.log(rezult)
 // -------------------------------------------

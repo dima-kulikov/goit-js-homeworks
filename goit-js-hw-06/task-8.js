@@ -90,11 +90,14 @@ const users = [
 
 
   const getUsersWithFriend = (users, friendName) => {
-    let friends =
-        users.filter(us=> us.friends == friendName);
+    // let friends =
+    //     users.filter(us=> us.friends == friendName);
+    //     console.log(friends)
+    //     return friends
 
-        console.log(friends)
-        return friends
+    return users.filter(us=> us.friends.some(one=> one == friendName))
+    .map(names=> names.name)
+
   };
   
   console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]

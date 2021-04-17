@@ -88,8 +88,16 @@ const users = [
 //   Задание 7
 // Получить общую сумму баланса (поле balance) всех пользователей.
 
-const calculateTotalBalance = users => {
-  // твой код
+
+// const likes = users.reduce((totalLikes, tweet) => totalLikes + tweet.balance, 0);
+// console.log(likes); 
+
+
+
+const calculateTotalBalance  = users => {
+  const ansver = users.reduce((total, one) => total + one.balance, 0);
+
+  return ansver
 };
 
 console.log(calculateTotalBalance(users)); // 20916

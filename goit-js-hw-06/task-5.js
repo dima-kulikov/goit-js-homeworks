@@ -89,15 +89,10 @@ const users = [
 //   Получить пользоваля (не массив) по email (поле email, он уникальный). 
 
 const getUserWithEmail = (users, email) => {
-    let ansver =
 
-    users.filter(us=> us.email == email)
-    console.log(ansver)
+  return users.filter(us=> us.email == email)
+  .map(us=> us.name);
 
-    let names =
-    ansver.map(us=> us.name);
-
-    return names
 
   };
   

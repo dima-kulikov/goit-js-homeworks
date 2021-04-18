@@ -90,16 +90,12 @@ const users = [
 
 
   const getInactiveUsers = users => {
-    let ansver = 
 
-    users.filter(us => us.isActive == false);
-    console.log(ansver)
 
-    let names =
+    return  users.filter(us => us.isActive == false)
+            .map(user=>user.name);
 
-    ansver.map(user=>user.name);
 
-    return names
   };
   
   console.log(getInactiveUsers(users));

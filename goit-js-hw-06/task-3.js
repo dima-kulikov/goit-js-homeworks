@@ -89,17 +89,12 @@ const users = [
 // Получить массив имен пользователей по полу (поле gender).
 
 const getUsersWithGender = (users, gender) => {
-let ansver = 
 
-    users.filter(us => us.gender == gender);
-    console.log(ansver)
 
-const names = 
-    
-    ansver.map(user => user.name);
-    console.log(names)
+  return  users.filter(us => us.gender == gender)
 
-return names
+    .map(user => user.name);
+
 };
 
   

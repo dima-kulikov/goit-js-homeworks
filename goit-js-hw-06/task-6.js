@@ -98,14 +98,19 @@ const users = [
 // Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
 
 const getUsersWithAge = (users, min, max) => {
-    let ansver =
+    // let ansver =
 
-    users.filter(us=> min < us.age && us.age< max );
-    console.log(ansver)
+    // users.filter(us=> min < us.age && us.age< max );
+    // console.log(ansver)
    
-    let names = ansver.map(nam=> nam.name);
+    // let names = ansver.map(nam=> nam.name);
 
-    return names
+    // return names
+
+
+    return users.filter(us=> min < us.age && us.age< max )
+    .map(nam=> nam.name);
+
 };
 
 console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]

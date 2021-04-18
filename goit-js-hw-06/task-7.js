@@ -95,9 +95,9 @@ const users = [
 
 
 const calculateTotalBalance  = users => {
-  const ansver = users.reduce((total, one) => total + one.balance, 0);
+  return users.reduce((total, one) => total + one.balance, 0);
 
-  return ansver
+   
 };
 
 console.log(calculateTotalBalance(users)); // 20916

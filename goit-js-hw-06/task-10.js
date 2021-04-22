@@ -89,16 +89,21 @@ const users = [
 //   Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
   const getSortedUniqueSkills = users => {
-    let first = users.map(skil=> skil.skills)
-    console.log(first)
-    let second = first.flat();
-    console.log(second)
-let tree = second.reduce((oll, first)=> oll.includes(first) ? oll:[...oll, first], []);
-console.log(tree);
-let forl = tree.sort()
-console.log(forl)
-return forl
+//     let first = users.map(skil=> skil.skills)
+//console.log(first)
+//     let second = first.flat();
+//console.log(second)
+//     let tree = second.reduce((oll, first)=> oll.includes(first) ? oll:[...oll, first], []);
+//console.log(tree);
+//     let forl = tree.sort()
+// console.log(forl)
+//     return forl
     
+    return users
+    .map(skil=> skil.skills)
+    .flat()
+    .reduce((oll, first)=> oll.includes(first) ? oll:[...oll, first], [])
+    .sort()
   };
   
   console.log(getSortedUniqueSkills(users));

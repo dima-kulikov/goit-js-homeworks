@@ -5,4 +5,6 @@ button.textContent ='Heloo!!!!'
 
 const mi = document.querySelectorAll('.menu-item');
 console.log(mi)
-mi.textContent ='123456!!!!'
+
+const image = document.querySelector('.avatar');
+console.log(image)

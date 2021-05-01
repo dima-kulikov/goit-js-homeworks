@@ -1,0 +1,27 @@
+.masthead{
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item{
+display: inline;
+text-transform: uppercase;
+margin: 0px 10px;
+}
+.menu-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+}
+.button{
+    margin-right: 60px;
+    background-color: rgb(175, 109, 219);
+    cursor: pointer;
+    border: none;
+}
+.button:hover{
+    background-color: rgb(221, 119, 88);
+}

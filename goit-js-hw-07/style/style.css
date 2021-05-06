@@ -1,6 +1,11 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
 .masthead{
     border-bottom: 2px solid black;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     display: flex;
     justify-content: space-between;
 }
@@ -14,7 +19,12 @@ margin: 0px 10px;
     text-decoration: none;
     color: black;
     font-size: 20px;
+    padding: 17px 20px;
     
+}
+.active a{
+    background-color: brown;
+    color: white;
 }
 .button{
     margin-right: 60px;
@@ -25,3 +35,4 @@ margin: 0px 10px;
 .button:hover{
     background-color: rgb(221, 119, 88);
 }
+

@@ -1,6 +1,6 @@
 const button = document.querySelector('.button')
 const buttonjs = document.querySelector('.js-btn');
-
+const homeMenuActiv = document.querySelector('.menu-item');
 
 
 button.textContent ='Heloo!!!!'
@@ -11,12 +11,13 @@ console.log(mi)
 const image = document.querySelector('.avatar');
 
 
-buttonjs.addEventListener('click', nextimg);
+buttonjs.addEventListener('click', className);
 
 image.alt = 'Магазин Днипро-М';
 image.title = 'Магазин Днипро-М';
 
 
-function nextimg(){
-    image.src ='https://klike.net/uploads/posts/2018-11/1543310656_14.jpg';
-}
+function className(){
+    homeMenuActiv.classList.add('active')
+};
+

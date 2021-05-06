@@ -22,7 +22,7 @@ margin: 0px 10px;
     padding: 17px 20px;
     
 }
-.active a{
+.menu-item.active a{
     background-color: brown;
     color: white;
 }
@@ -36,3 +36,7 @@ margin: 0px 10px;
     background-color: rgb(221, 119, 88);
 }
 
+.user-profile{
+    display: flex;
+    align-items: center;
+}

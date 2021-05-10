@@ -1,6 +1,6 @@
-const user = {
+const userA = {
     name:'Dima kl',
-    phone:'121-245-45-54',
+    phone:'111-11-11',
     email:'dima@mail.com',
     avatar:'https://www.meme-arsenal.com/memes/cbfd4797382778baf1f41b8439399262.jpg',
     address:{
@@ -9,9 +9,20 @@ const user = {
     }
 };
 
+const userB = {
+    name:'Paha Golden',
+    phone:'222-22-22',
+    email:'PAHA@mail.com',
+    avatar:'https://www.meme-arsenal.com/memes/cbfd4797382778baf1f41b8439399262.jpg',
+    address:{
+        country:'UA',
+        city:'Kyiv'
+    }
+};
+
 
 const profileContainer = document.querySelector('.profile-container');
-const profile = createUserProfile(user);
+const profile = createUserProfile(userA);
 profileContainer.appendChild(profile);
 
 
@@ -48,7 +59,7 @@ function createUserProfile({name, phone, email, avatar, address}){
     // nameField.appendChild(label);
     // nameField.appendChild(nameFieldTextContent);
 
-    infoList.appendChild(nameField);
+    // infoList.appendChild(nameField);
     container.append(image, infoList);
 
 
@@ -68,3 +79,4 @@ function createInfoItem (label, text){
     return item;
 }
 
+console.log(document.querySelector('.masthead').textContent)

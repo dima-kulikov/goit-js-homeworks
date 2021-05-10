@@ -11,10 +11,9 @@ const user = {
 
 
 const profileContainer = document.querySelector('.profile-container');
-
 const profile = createUserProfile(user);
-
 profileContainer.appendChild(profile);
+
 
 
 function createUserProfile({name, phone, email, avatar, address}){
@@ -30,18 +29,42 @@ function createUserProfile({name, phone, email, avatar, address}){
     const infoList = document.createElement("ul");
     infoList.classList.add('info');
 
-    const nameField = document.createElement('li');
-    const label = document.createElement('b');
+    const nameField = createInfoItem('Name', name);
+    const phoneField = createInfoItem('Phone', phone);
+    const emailField = createInfoItem('Email', email);
+    const addressField = createInfoItem(
+        'Address', 
+        `${address.country}, ${address.city}`
+        );
     
+    infoList.append(nameField, phoneField, emailField, addressField);
 
+    //создание тегов "li"/"b" их внутрянки и подключение
 
-    // container.appendChild(image);
-    // container.appendChild(infoList);
+    // const nameField = document.createElement('li');
+    // const label = document.createElement('b');
+    // label.textContent = 'Name: ';
+    // const nameFieldTextContent = document.createTextNode("Deonte Fei");
+    // nameField.appendChild(label);
+    // nameField.appendChild(nameFieldTextContent);
+
+    infoList.appendChild(nameField);
     container.append(image, infoList);
 
-    console.log(container);
-    return container;
 
-    
+    return container;
+};
+
+
+//функция создает li с внутрянкой, вместо ручного создания каждой li
+function createInfoItem (label, text){
+    const item = document.createElement('li');
+    const itemLabel = document.createElement('b');
+    itemLabel.textContent = `${label}: `;
+    const itemText = document.createTextNode(text)
+
+    item.append(itemLabel, itemText);
+
+    return item;
 }
 

@@ -13,7 +13,7 @@ const userB = {
     name:'Paha Golden',
     phone:'222-22-22',
     email:'PAHA@mail.com',
-    avatar:'https://www.meme-arsenal.com/memes/cbfd4797382778baf1f41b8439399262.jpg',
+    avatar:'https://klike.net/uploads/posts/2019-03/1551511825_12.jpg',
     address:{
         country:'UA',
         city:'Kyiv'
@@ -22,7 +22,7 @@ const userB = {
 
 
 const profileContainer = document.querySelector('.profile-container');
-const profile = createUserProfile(userA);
+const profile = createUserProfile(userB);
 profileContainer.appendChild(profile);
 
 
@@ -79,7 +79,7 @@ function createInfoItem (label, text){
     return item;
 }
 
-console.log(document.querySelector('.masthead').textContent)
+// console.log(document.querySelector('.masthead').textContent)
 
 
 
@@ -87,3 +87,24 @@ const menu = document.querySelector('.menu');
 const newItem = '<li class="menu-item"><a href="/kontakt">kontakt</a></li>'
 
 menu.insertAdjacentHTML("beforeend", newItem)
+
+//шаблон вставки кода, легче и быстрее чем "createElement"
+
+const markup =`
+<div class="user-profile">
+    <img class="avatars" src="https://klike.net/uploads/posts/2019-03/1551511825_12.jpg" alt="">
+
+    <ul class="info">
+      <li><b>Name:</b> 11111</li>
+      <li><b>Phone:</b> 2222-222-22</li>
+      <li><b>Email:</b> 22@edfe.com</li>
+      <li><b>Location:</b> USA, 222</li>
+    </ul>
+  </div>
+`;
+
+// document.querySelector('.profile-container').innerHTML = markup;
+
+const profileContainer2 = document.querySelector('.profile-container');
+
+// profileContainer2.insertAdjacentHTML("afterbegin", markup);

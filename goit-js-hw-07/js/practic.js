@@ -6,7 +6,7 @@ const image = document.querySelector('.logo');
 button.textContent ='Heloo!!!!'
 
 const mi = document.querySelectorAll('.menu-item');
-console.log(mi)
+// console.log(mi)
 
 
 

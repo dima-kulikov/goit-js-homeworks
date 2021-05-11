@@ -80,3 +80,10 @@ function createInfoItem (label, text){
 }
 
 console.log(document.querySelector('.masthead').textContent)
+
+
+
+const menu = document.querySelector('.menu');
+const newItem = '<li class="menu-item"><a href="/kontakt">kontakt</a></li>'
+
+menu.insertAdjacentHTML("beforeend", newItem)

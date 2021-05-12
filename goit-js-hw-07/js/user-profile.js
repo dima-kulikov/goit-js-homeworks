@@ -22,7 +22,7 @@ const userB = {
 
 
 const profileContainer = document.querySelector('.profile-container');
-const profile = createUserProfile(userB);
+const profile = createUserProfile(userA);
 profileContainer.appendChild(profile);
 
 
@@ -105,6 +105,69 @@ const markup =`
 
 // document.querySelector('.profile-container').innerHTML = markup;
 
-const profileContainer2 = document.querySelector('.profile-container');
+// const profileContainer2 = document.querySelector('.profile-container');
+
 
 // profileContainer2.insertAdjacentHTML("afterbegin", markup);
+
+
+///////////////////////////////////////////////////////////////////////
+
+const testMarkup =`
+<div class="user-profile">
+    <img class="avatars" src="{{ avatar }}" alt="">
+
+    <ul class="info">
+      <li><b>Name:</b> {{ name }}</li>
+      <li><b>Phone:</b> {{ phone }}</li>
+      <li><b>Email:</b> {{ email }}</li>
+      <li><b>Location:</b> {{ address.country }}, {{ address.city }}</li>
+    </ul>
+  </div>
+`;
+const template = Handlebars.compile(testMarkup);
+
+
+/////////////////////////////////////////////////////////////////
+// const template = Handlebars.compile('' +
+// '<div class="user-profile">' +
+//     '<img class="avatars" src="{{ avatar }}" alt="">' + 
+//     '<ul class="info">' +
+//         '<li><b>Name:</b> {{ name }}</li>' +
+//         '<li><b>Phone:</b> {{ phone }}</li>' +
+//         '<li><b>Email:</b> {{ email }}</li>' +
+//         '<li><b>Location:</b> {{ address.country }}, {{ address.city }}</li>' +
+//     '</ul>' +
+// '</div>'
+// );
+
+
+const users = [
+    {
+        name:'Dima kl',
+        phone:'111-11-11',
+        email:'dima@mail.com',
+        avatar:'https://www.meme-arsenal.com/memes/cbfd4797382778baf1f41b8439399262.jpg',
+        address:{
+            country:'USA',
+            city:'NY'
+        }
+    },
+    {
+        name:'Paha Golden',
+        phone:'222-22-22',
+        email:'PAHA@mail.com',
+        avatar:'https://klike.net/uploads/posts/2019-03/1551511825_12.jpg',
+        address:{
+            country:'UA',
+            city:'Kyiv'
+        }
+    }
+];
+
+const testContainer = document.querySelector('.test-container');
+
+users.forEach(user => {
+    const test = template(user);
+    testContainer.insertAdjacentHTML("afterbegin", test);
+});

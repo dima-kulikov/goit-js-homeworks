@@ -21,15 +21,18 @@
     }
 
     #btn {
-      display: block;
+      /* display: block; */
       margin-top: 20px;
     }
 
     .ansver {
-      margin: 30px 0px;
+      margin: 0px 40px;
       outline: 2px solid rgb(29, 212, 105);
-      width: 50px;
-      height: 50px;
+      display: inline;
+      text-align: center;
+      font-size: 22px;
+      text-align: center;
+    padding: 5px;
     }
   </style>
 </head>
@@ -72,29 +75,38 @@
 
     <div class="block">Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'
       <button id="btn">Старт кода </button>
-
-
-      <!-- <div class="ansver">dsadsadsadsad</div> -->
     </div>
+    <div class="block">
+      <p>Для каждого элемента <strong>li.item</strong> в списке <strong>ul#categories</strong>, найдет и выведет в консоль текст заголовка элемента (тега h2) и количество элементов в категории (всех вложенных в него элементов li). </p>
+      <button id="btn-2">Старт кода </button>
+    </div>
+
   </div>
 
   <script>
     let btn = document.querySelector('#btn');
+    let btn2 = document.querySelector('#btn-2');
 
     btn.addEventListener('click', () => {
-      const pp = document.getElementById('categories').children.length;
+      const firstAnsver = document.getElementById('categories').children.length;
       const myBlock = document.querySelector('.block');
       // const myAnsver = document.createElement('div');
       // myAnsver.classList.add('ansver');
       // myAnsver.textContent = pp;
       // myBlock.append(myAnsver);
-
       // ----------версия короче-----
-
-      const version2 = `<div class="ansver">${pp}</div>`;
+      const version2 = ` <div class="ansver">  правильный ответ: ${firstAnsver}</div>  `;
       myBlock.insertAdjacentHTML("beforeend", version2);
     }
     );
+
+    btn2.addEventListener('click', () => {
+// const secondAnsver = document.querySelector('.block').firstElementChild;
+// const version3 = ` <div class="ansver">  правильный ответ: ${secondAnsver}</div>  `;
+//       myBlock.insertAdjacentHTML("beforeend", version3);
+      console.log(document.querySelector('.item').textContent)
+    });
+
   </script>
 
 </body>

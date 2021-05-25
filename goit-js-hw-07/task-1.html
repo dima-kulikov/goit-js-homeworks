@@ -32,7 +32,7 @@
       text-align: center;
       font-size: 22px;
       text-align: center;
-    padding: 5px;
+      padding: 5px;
     }
   </style>
 </head>
@@ -101,12 +101,18 @@
     );
 
     btn2.addEventListener('click', () => {
-// const secondAnsver = document.querySelector('.block').firstElementChild;
-// const version3 = ` <div class="ansver">  правильный ответ: ${secondAnsver}</div>  `;
-//       myBlock.insertAdjacentHTML("beforeend", version3);
-      console.log(document.querySelector('.item').textContent)
-    });
+      // const secondAnsver = document.querySelector('.block').firstElementChild;
+      // const version3 = ` <div class="ansver">  правильный ответ: ${secondAnsver}</div>  `;
+      //       myBlock.insertAdjacentHTML("beforeend", version3);
 
+      const myItem = document.querySelector('.item');
+
+      console.dir(myItem.forEach(el => {
+        el.firstChild.nextSibling.textContent
+      }));
+
+      // console.dir(document.querySelector('.item').firstChild.nextSibling.textContent);
+    });
   </script>
 
 </body>

@@ -74,11 +74,11 @@
     </ul>
 
     <div class="block">Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'
-      <button id="btn">Старт кода </button>
+      <button id="btn">Старт кода</button>
     </div>
-    <div class="block">
+    <div class="block" id="second">
       <p>Для каждого элемента <strong>li.item</strong> в списке <strong>ul#categories</strong>, найдет и выведет в консоль текст заголовка элемента (тега h2) и количество элементов в категории (всех вложенных в него элементов li). </p>
-      <button id="btn-2">Старт кода </button>
+      <button id="btn-2">Старт кода</button>
     </div>
 
   </div>
@@ -86,10 +86,12 @@
   <script>
     let btn = document.querySelector('#btn');
     let btn2 = document.querySelector('#btn-2');
+    const myBlock = document.querySelector('.block');
+    const secondBtn = document.querySelector('#second');
 
     btn.addEventListener('click', () => {
       const firstAnsver = document.getElementById('categories').children.length;
-      const myBlock = document.querySelector('.block');
+  
       // const myAnsver = document.createElement('div');
       // myAnsver.classList.add('ansver');
       // myAnsver.textContent = pp;
@@ -104,25 +106,12 @@
 
 
     btn2.addEventListener('click', () => {
-      // console.log(myItem.firstElementChild.textContent)
-      // let res = [];
-      // for (let element of myItem) {
-      //   res.push(element.firstChild.nextSibling.textContent)
-      // }
-      // console.dir(res);
-
-      // -------------------------------
-      // let pp = [];
-      // pp.push(myItem)
-      // console.log(pp)
-      // myItem.map(el => el.firstChild.nextSibling.textContent);
-
-
       const myItem = document.querySelectorAll('.item');
       for (let elem of myItem) {
         let category = elem.firstElementChild.textContent;
         let quantityElem = elem.lastElementChild.children.length;
-        console.log(`Категория: ${category} \nКоличество элементов: ${quantityElem}`);
+        const version3 = `<div style="display:block; margin:10px;"><strong>Категория:</strong> ${category};  <strong>Количество элементов:</strong> ${quantityElem};</div>`;
+        secondBtn.insertAdjacentHTML("beforeend", version3);
       };
     });
 

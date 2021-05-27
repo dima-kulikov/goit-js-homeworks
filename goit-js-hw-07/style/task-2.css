@@ -1,0 +1,16 @@
+section{
+    width: 80%;
+    border: 2px solid black;
+    margin: 50px auto;
+}
+h1{
+    text-align: center;
+}
+section p{
+    padding: 20px;
+    font-size: 18px;
+    line-height: 25px;
+}
+#btn{
+    margin: 25px;
+}

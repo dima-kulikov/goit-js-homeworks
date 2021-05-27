@@ -100,19 +100,34 @@
     }
     );
 
+
+
+
     btn2.addEventListener('click', () => {
-      // const secondAnsver = document.querySelector('.block').firstElementChild;
-      // const version3 = ` <div class="ansver">  правильный ответ: ${secondAnsver}</div>  `;
-      //       myBlock.insertAdjacentHTML("beforeend", version3);
+      // console.log(myItem.firstElementChild.textContent)
+      // let res = [];
+      // for (let element of myItem) {
+      //   res.push(element.firstChild.nextSibling.textContent)
+      // }
+      // console.dir(res);
 
-      const myItem = document.querySelector('.item');
+      // -------------------------------
+      // let pp = [];
+      // pp.push(myItem)
+      // console.log(pp)
+      // myItem.map(el => el.firstChild.nextSibling.textContent);
 
-      console.dir(myItem.forEach(el => {
-        el.firstChild.nextSibling.textContent
-      }));
 
-      // console.dir(document.querySelector('.item').firstChild.nextSibling.textContent);
+      const myItem = document.querySelectorAll('.item');
+      for (let elem of myItem) {
+        let category = elem.firstElementChild.textContent;
+        let quantityElem = elem.lastElementChild.children.length;
+        console.log(`Категория: ${category} \nКоличество элементов: ${quantityElem}`);
+      };
     });
+
+
+
   </script>
 
 </body>

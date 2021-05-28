@@ -9,24 +9,22 @@ const ingredients = [
 
 
 
-// console.log(list)
-// const ansver =[];
+const btn = document.querySelector('#btn');
+
+
+btn.addEventListener('click', ()=>{
+ 
 const pp = document.querySelector('#ingredients');
-for (let elem of ingredients){
+ // --------ВАРИАНТ 1
+// for (let elem of ingredients){
+//   const pop = `<li>${elem}</li>`;
+//   pp.insertAdjacentHTML("afterbegin", pop);
+// };
 
-  // Вариант --1
-  // const list = document.createElement('li');
-  // list.textContent = elem;
+// --------ВАРИАНТ    2
+pp.innerHTML = ingredients.reduce((ansver, value)=> ansver + `<li>${value}</li>`,);
 
-
-  ///вариант -2
-  const pop = `<li>${elem}</li>`;
-
-  console.log(pop);
-
-  pp.insertAdjacentHTML("afterbegin", pop);
-};
-
+}) ; 
 
 // console.log(list)
 // console.log(ingredients)

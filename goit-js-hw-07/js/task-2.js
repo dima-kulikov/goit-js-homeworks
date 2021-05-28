@@ -7,19 +7,26 @@ const ingredients = [
     'Приправы',
   ];
 
-const list = document.createElement('li');
-list.textContent = `${ingredients}: `
+
 
 // console.log(list)
 // const ansver =[];
-// for (let elem of ingredients){
-//     ansver.push(  list.textContent = `${ingredients[1]}: `)
-// };
-// const ansver = [];
-ingredients.forEach(element => {
-  list.textContent = `${element}: ` ;
+const pp = document.querySelector('#ingredients');
+for (let elem of ingredients){
 
-});
+  // Вариант --1
+  // const list = document.createElement('li');
+  // list.textContent = elem;
 
 
-console.log(list)
+  ///вариант -2
+  const pop = `<li>${elem}</li>`;
+
+  console.log(pop);
+
+  pp.insertAdjacentHTML("afterbegin", pop);
+};
+
+
+// console.log(list)
+// console.log(ingredients)

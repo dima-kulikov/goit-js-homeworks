@@ -17,4 +17,15 @@ const images = [
   ];
 
 
-  
+btn.addEventListener('click', ()=>{
+
+  const gelleryFotoo = document.querySelector('#gallery');
+  gelleryFotoo.classList.add('foto-flex');
+
+// - не срабатывает первый элемент
+  // gelleryFotoo.innerHTML = images.reduce((ansver, value)=> ansver + `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`);
+// - нужно убрать запятые за элементами
+  const doubledNumbers = images.map(value => `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`);
+  // doubledNumbers.join('');
+  return gelleryFotoo.innerHTML = doubledNumbers;
+});

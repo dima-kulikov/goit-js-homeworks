@@ -22,10 +22,29 @@ btn.addEventListener('click', ()=>{
   const gelleryFotoo = document.querySelector('#gallery');
   gelleryFotoo.classList.add('foto-flex');
 
-// - не срабатывает первый элемент
+// - не срабатывает первый элемент  СПОСОБ-1
   // gelleryFotoo.innerHTML = images.reduce((ansver, value)=> ansver + `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`);
-// - нужно убрать запятые за элементами
-  const doubledNumbers = images.map(value => `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`);
-  // doubledNumbers.join('');
-  return gelleryFotoo.innerHTML = doubledNumbers;
+// - нужно убрать запятые за элементами  СПОСОБ-2
+  // const doubledNumbers = images.map(value => `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`);
+
+  // --не работает
+  // doubledNumbers.join('');  
+  // --не работает 
+  // let result = doubledNumbers.map(i => i.split(',').filter(x => x.trim()).join());
+//  console.log(result)
+// ----не работает
+// for(var i=0;i<doubledNumbers.length;i++) { 
+//   if(doubledNumbers[i].indexOf(',') > -1) { 
+//     console.log(doubledNumbers[i].replace(/,/g,'')); 
+//   } 
+// }
+// return gelleryFotoo.innerHTML = doubledNumbers;
+
+// --------   СПООБ 3
+for (let value of images){
+  const pop =  `<li><img width="100%" src="${value.url}" alt="${value.alt}"></li>`;
+  gelleryFotoo.insertAdjacentHTML("afterbegin", pop);
+};
+
+
 });

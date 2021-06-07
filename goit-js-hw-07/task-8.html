@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8</title>
+    <link rel="stylesheet" href="./style/task-3.css">
+</head>
+
+<body>
+    <style>
+
+
+    </style>
+
+    <section>
+        <h1>Задание 8</h1>
+        <p>Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.</p>
+        <p>Создай функцию createBoxes(amount), которая принимает 1 параметр amount - число. Функция создает столько div, сколько указано в amount и добавляет их в div#boxes.</p>
+
+        <p>Каждый созданный div:</p>
+        <ul>
+            <li>Имеет случайный rgb цвет фона</li>
+            <li>Размеры самого первого div - 30px на 30px</li>
+            <li>Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px</li>
+            <li>Создай функцию destroyBoxes(), которая очищает div#boxes.</li>
+        </ul>
+
+
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" />
+            <button type="button" data-action="render">Создать</button>
+            <button type="button" data-action="destroy">Очистить</button>
+        </div>
+
+        <div id="boxes"></div>
+    </section>
+    <!-- создания коллекции элементов js -->
+
+    <script src="./js/task-8.js"></script>
+</body>
+
+</html>

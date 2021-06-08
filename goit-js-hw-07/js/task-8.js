@@ -3,7 +3,7 @@ let destroy = document.querySelector('[data-action="destroy"]');
 let boxes = document.getElementById("boxes");
 render.addEventListener("click", getAmount);
 destroy.addEventListener("click", destroyBoxes);
-let pp = 1;
+let pp = Number(document.querySelector("#myNumber").value);
 
 function getAmount() {
     var amount = + document.querySelector("#myNumber").value;

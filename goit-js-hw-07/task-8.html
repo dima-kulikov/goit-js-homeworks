@@ -11,7 +11,16 @@
 
 <body>
     <style>
-
+#boxes{
+    margin: 20px;
+}
+#controls{
+    margin: 20px;
+}
+p {
+    padding: 0px !important;
+    text-align: center;
+}
 
     </style>
 
@@ -30,7 +39,7 @@
 
 
         <div id="controls">
-            <input id="myNumber" type="number" min="0" max="100" step="1" />
+            <input style="height: 20px;" id="myNumber" type="number" min="0" max="100" step="1" />
             <button type="button" data-action="render">Создать</button>
             <button type="button" data-action="destroy">Очистить</button>
         </div>

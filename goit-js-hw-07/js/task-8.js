@@ -1,26 +1,36 @@
-// let amount = document.getElementById("myNumber").value;
-// let ansver = document.getElementById("boxes");
+let render = document.querySelector('[data-action="render"]');
+let destroy = document.querySelector('[data-action="destroy"]');
+let boxes = document.getElementById("boxes");
+render.addEventListener("click", getAmount);
+destroy.addEventListener("click", destroyBoxes);
+let pp = 1;
 
-const render = document.querySelector("[data-action]");
-
-render.addEventListener('click', function myFunction() {
-    var amount = document.getElementById("myNumber").value;
-    document.getElementById("boxes").innerHTML = amount;
-});
-
-
-
-
-
+function getAmount() {
+    var amount = + document.querySelector("#myNumber").value;
+    createBoxes(amount);
+    // console.log(amount)
+  }
 
 
-// function CreateBoxes(amount) {
-//     this.number = amount;
+  function createBoxes(amount) {
+    var basicSize = 30;
+    var fragment = document.createDocumentFragment();
+    for (var i = 0; i < amount; i++) {
+      var size = basicSize + i * 10;
+      var div = document.createElement("div");
+      var p = document.createElement("p");
+      p.innerHTML = pp +=1;
+      div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
+      div.appendChild(p);
+      fragment.appendChild(div);
+    }
+    boxes.appendChild(fragment);
+  }
 
-//   }
+  function destroyBoxes() {
+    boxes.innerHTML = "";
+  }
   
-
-
-//   let user = new CreateBoxes("5");
-  
-//   console.log(ansver.innerHTML = amount.value);
+  function random() {
+    return Math.floor(Math.random() * 256);
+  }

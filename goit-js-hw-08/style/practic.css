@@ -1,0 +1,19 @@
+ul{
+   display: flex; 
+    list-style-type: none;
+}
+ul a{
+    padding: 5px 15px;
+    margin: 0px 10px;
+    text-decoration: none;
+    border: 2px solid rgb(143, 141, 141);
+    background-color: rgb(180, 177, 177);
+    color: black;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+ul a:hover{
+    border: 2px solid sandybrown;
+}
+.active{
+    background-color: seagreen;
+}

@@ -8,11 +8,16 @@ function chenjColor(params) {
     console.log(params.target);
     console.log(params.currentTarget)
 
+    if (params.target === params.currentTarget){
+        return;
+    };
+
 const activLink = params.currentTarget.querySelector('.active');
-console.log(activLink);
-if(activLink){
+// console.log(activLink);
+if (activLink){
     activLink.classList.remove('active');
 }
+
 
     params.target.classList.add('active');
 }

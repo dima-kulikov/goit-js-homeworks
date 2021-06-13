@@ -18,7 +18,7 @@
 // };
 
 
-// ------- код который привязывает меню к нужной секции -----------------
+// ------- код который привязывает меню к нужной секции   (вхождение во вьюпорт)-----------------
 const nav = document.querySelector('.page-nav');
 
 const onEntry = (entries) => {
@@ -43,7 +43,7 @@ const onEntry = (entries) => {
 };
 
 const options ={
-    threshold: 0.6
+    threshold: 0.8
 }
 
 
@@ -54,22 +54,3 @@ section.forEach(section =>{
     observer.observe(section);
 });
 
-// --ЗАГРУЗКА ЛЕЙЗИ ЛОАД
-
-const lazyload = target =>{
-    const options ={};
-    const io = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            console.log(entry);
-        })
-    }, options);
-
-    io.observe(target);
-};
-
-const images = document.querySelectorAll('.section img');
-
-
-images.forEach(image=>{
-    lazyload(image);
-})

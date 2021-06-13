@@ -29,7 +29,17 @@ ul a:hover{
     top: 0;
     /* height: 50px; */
     padding: 20px 0px;
+
 }
 .container{
-    margin-top: 30px;
+    margin-top: 80px;
+}
+/* .container :first-child{
+    margin-top: 80px;
+} */
+.section{
+    border: 2px solid goldenrod;
+    padding: 10px;
+    margin: 50px auto;
+    width: 70%;
 }

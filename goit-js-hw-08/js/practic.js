@@ -17,6 +17,8 @@
 //     params.target.classList.add('active');
 // };
 
+
+// ------- код который привязывает меню к нужной секции -----------------
 const nav = document.querySelector('.page-nav');
 
 const onEntry = (entries) => {
@@ -51,3 +53,23 @@ const section = document.querySelectorAll('.section');
 section.forEach(section =>{
     observer.observe(section);
 });
+
+// --ЗАГРУЗКА ЛЕЙЗИ ЛОАД
+
+const lazyload = target =>{
+    const options ={};
+    const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            console.log(entry);
+        })
+    }, options);
+
+    io.observe(target);
+};
+
+const images = document.querySelectorAll('.section img');
+
+
+images.forEach(image=>{
+    lazyload(image);
+})

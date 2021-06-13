@@ -6,7 +6,7 @@ ul{
 }
  a{
     padding: 5px 15px;
-    margin: 0px 10px;
+    margin: 20px 10px;
     text-decoration: none;
     border: 2px solid rgb(143, 141, 141);
     background-color: rgb(180, 177, 177);
@@ -18,4 +18,18 @@ ul a:hover{
 }
 .active{
     background-color: seagreen;
+}
+
+.page-nav{
+    position: fixed;
+    background-color: burlywood;
+    /* padding: 20px; */
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    /* height: 50px; */
+    padding: 20px 0px;
+}
+.container{
+    margin-top: 30px;
 }

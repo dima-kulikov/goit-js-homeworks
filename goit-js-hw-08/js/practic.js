@@ -1,21 +1,25 @@
-// const jsNav = document.querySelector('.js-nav');
+const jsNav = document.querySelector('.js-nav');
 
-// jsNav.addEventListener('click', chenjColor);
+jsNav.addEventListener('click', chenjColor);
 
 
-// function chenjColor(params) {
-//     params.preventDefault();
-//     console.log(params.target);
-//     console.log(params.currentTarget);
+function chenjColor(params) {
+    params.preventDefault();
+    console.dir(params.target);
+    console.log(params.currentTarget);
 
-// const activLink = params.currentTarget.querySelector('.active');
-// console.log(activLink);
-// if(activLink){
-//     activLink.classList.remove('active');
-// };
+const activLink = params.currentTarget.querySelector('.active');
+console.log(activLink);
 
-//     params.target.classList.add('active');
-// };
+if (params.target.nodeName === 'A') {
+    if(activLink){
+        activLink.classList.remove('active');
+    };
+        params.target.classList.add('active');
+    };
+}
+
+
 
 
 // ------- код который привязывает меню к нужной секции   (вхождение во вьюпорт)-----------------

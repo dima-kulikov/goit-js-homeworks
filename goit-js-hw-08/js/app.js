@@ -107,12 +107,54 @@ jsNav.addEventListener('click', chenjFoto);
 
 function chenjFoto(params) {
   params.preventDefault();
-
-
   if (params.target.nodeName === 'IMG') {
-    console.log(params.target.dataset.source)
+    // console.log(params.target.dataset.source)
     lightBox.classList.add('is-open');
-    console.log(lightBox.children[1].children[0])
+    // console.log(lightBox.children[1].children[0])
     lightBoxImg.src = params.target.dataset.source;
   };
 };
+// ------------------------------------------------
+
+// ЗАКРЫТИЕ ПРИ НАЖАТИИ НА КРЕСТИК
+const close = document.querySelector('button[data-action="close-lightbox"]')
+
+close.addEventListener('click', () => {
+  lightBox.classList.remove('is-open');
+  lightBoxImg.src = '';
+  console.log(lightBoxImg.src)
+});
+
+//  ЗАКРЫТИЕ ПРИ НАЖАТИИ НА БЛОК, ОТСЛЕЖИВАНИЕ ТАРГЕТ
+lightBox.addEventListener('click', (params) => {
+  if (params.target.classList.contains('lightbox__overlay')) {
+    lightBox.classList.remove('is-open');
+    lightBoxImg.src = '';
+    console.log(lightBoxImg.src);
+    params.preventDefault();
+  }
+});
+// ---------------------------------------
+// document.onkeypress = (function (e) {
+//   if (e.key === "Escape") {
+//     // console.log(event)
+//     console.log(dsadsadsadsadws)
+//   };
+// });
+
+document.onkeydown = function (evt) {
+  if (evt.key === "Escape" || evt.key === "Esc") {
+    // alert("работает");
+    lightBox.classList.remove('is-open');
+    lightBoxImg.src = '';
+    console.log(lightBoxImg.src);
+    params.preventDefault();
+  }
+}
+  // else {
+  //   isEscape = (evt.keyCode === 27);
+  // }
+//   if (isEscape) {
+//     alert("Escape");
+//   }
+// };

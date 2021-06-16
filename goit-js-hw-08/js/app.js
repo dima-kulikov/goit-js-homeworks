@@ -158,3 +158,10 @@ document.onkeydown = function (evt) {
 //     alert("Escape");
 //   }
 // };
+
+
+let originFoto = []
+for (var i = 0; i < galleryItems.length; i++)
+   
+originFoto.push(galleryItems[i].original)
+console.log(originFoto)

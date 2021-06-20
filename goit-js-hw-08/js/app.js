@@ -94,9 +94,7 @@ function pp() {
 
 pp()
 
-// ----------------------------------
-
-
+// РАБОТА МОДАЛЬНОГО ОКНА, ПРИСВАЕВАНИЕ КЛАССА И ОТСЛЕЖИВАНИЕ ПО ТАРГЕТУ ФОТО, С УСТАНОВКОЙ В SRC
 const jsNav = document.querySelector('.js-gallery');
 const lightBox = document.querySelector('.js-lightbox');
 const lightBoxImg = document.querySelector('.js-lightbox .lightbox__image');
@@ -114,7 +112,6 @@ function chenjFoto(params) {
     // console.log(originFoto.indexOf(lightBoxImg.src)); // показывает его число в массиве
   };
 };
-// ------------------------------------------------
 
 // ЗАКРЫТИЕ ПРИ НАЖАТИИ НА КРЕСТИК
 const close = document.querySelector('button[data-action="close-lightbox"]')
@@ -148,28 +145,24 @@ document.onkeydown = function (evt) {
 }
 
 // СОЗДАНИЕ МАССИВА С БОЛЬШИМИ ФОТО
-
 let originFoto = []
-for (var i = 0; i < galleryItems.length; i++)
-   
+for (var i = 0; i < galleryItems.length; i++)  
 originFoto.push(galleryItems[i].original)
 // console.log(originFoto)
 // console.log(lightBoxImg.src)
 
-//// кнопри право и лево
+
+//// КНОПКИ ЛЕВО И ПРАВО, ПЕРЕКЛЮЧЕНИЕ ФОТО
 const rightBtn = document.querySelector('#right-btn');
 const leftBtn = document.querySelector('#left-btn');
-
 
 rightBtn.addEventListener('click', ()=>{
   let indexFoto = originFoto.indexOf(lightBoxImg.src);// показывает его число в массиве
   let i = -1;
   let nextFoto = indexFoto + i;
-
   console.log(lightBoxImg.src); ///показывает какое сейчас фото в модалке
   console.log(indexFoto) // его текущее число в массиве
   console.log(nextFoto);
-
   console.log(originFoto[8]);
   lightBoxImg.src = originFoto[nextFoto];
 

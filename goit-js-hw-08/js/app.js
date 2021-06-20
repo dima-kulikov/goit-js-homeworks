@@ -108,10 +108,10 @@ jsNav.addEventListener('click', chenjFoto);
 function chenjFoto(params) {
   params.preventDefault();
   if (params.target.nodeName === 'IMG') {
-    // console.log(params.target.dataset.source)
     lightBox.classList.add('is-open');
-    // console.log(lightBox.children[1].children[0])
     lightBoxImg.src = params.target.dataset.source;
+    // console.log(lightBoxImg.src); ///показывает какое сейчас фото в модалке
+    // console.log(originFoto.indexOf(lightBoxImg.src)); // показывает его число в массиве
   };
 };
 // ------------------------------------------------
@@ -134,14 +134,9 @@ lightBox.addEventListener('click', (params) => {
     params.preventDefault();
   }
 });
-// ---------------------------------------
-// document.onkeypress = (function (e) {
-//   if (e.key === "Escape") {
-//     // console.log(event)
-//     console.log(dsadsadsadsadws)
-//   };
-// });
 
+
+// ЗАКРЫТИЕ ПРИ НАЖАТИИ НА ESC
 document.onkeydown = function (evt) {
   if (evt.key === "Escape" || evt.key === "Esc") {
     // alert("работает");
@@ -151,17 +146,39 @@ document.onkeydown = function (evt) {
     params.preventDefault();
   }
 }
-  // else {
-  //   isEscape = (evt.keyCode === 27);
-  // }
-//   if (isEscape) {
-//     alert("Escape");
-//   }
-// };
 
+// СОЗДАНИЕ МАССИВА С БОЛЬШИМИ ФОТО
 
 let originFoto = []
 for (var i = 0; i < galleryItems.length; i++)
    
 originFoto.push(galleryItems[i].original)
-console.log(originFoto)
+// console.log(originFoto)
+// console.log(lightBoxImg.src)
+
+//// кнопри право и лево
+const rightBtn = document.querySelector('#right-btn');
+const leftBtn = document.querySelector('#left-btn');
+
+
+rightBtn.addEventListener('click', ()=>{
+  let indexFoto = originFoto.indexOf(lightBoxImg.src);// показывает его число в массиве
+  let i = -1;
+  let nextFoto = indexFoto + i;
+
+  console.log(lightBoxImg.src); ///показывает какое сейчас фото в модалке
+  console.log(indexFoto) // его текущее число в массиве
+  console.log(nextFoto);
+
+  console.log(originFoto[8]);
+  lightBoxImg.src = originFoto[nextFoto];
+
+});
+// ------------------
+leftBtn.addEventListener('click', ()=>{
+  let indexFoto = originFoto.indexOf(lightBoxImg.src);// показывает его число в массиве
+  let i = 1;
+  let nextFoto = indexFoto + i;
+  lightBoxImg.src = originFoto[nextFoto];
+
+});

@@ -135,6 +135,32 @@
   }
   
   .lightbox__button:hover,
-  .lightbox__button:focus {
+  .lightbox__button:focus,
+  .right:hover,
+  .right:focus,
+  .left:hover,
+  .left:focus
+   {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .right{
+    top: 50%;
+    right: 50px;
+    background-image: url('../images/strelka.png');
+  }
+  .left{
+    top: 50%;
+    left: 50px;
+    background-image: url('../images/strelka-2.png');
+  }
+
+  .general-class{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
